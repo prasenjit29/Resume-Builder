@@ -87,6 +87,13 @@ const ResumePreview = ({ resumeData }) => {
                 <span>{resumeData.personalInfo.linkedin}</span>
               </div>
             )}
+
+            {resumeData.personalInfo.github && (
+              <div className="contact-item">
+                <span className="contact-label">GitHub:</span>
+                <span>{resumeData.personalInfo.github}</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -134,9 +141,6 @@ const ResumePreview = ({ resumeData }) => {
                     {formatDateRange(edu.startDate, edu.endDate)}
                   </span>
                 </div>
-                {edu.gpa && (
-                  <p className="gpa">GPA: {edu.gpa}</p>
-                )}
               </div>
             ))}
           </div>

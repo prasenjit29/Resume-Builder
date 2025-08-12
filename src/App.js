@@ -12,6 +12,7 @@ function App() {
       phone: '',
       address: '',
       linkedin: '',
+      github: '',
       summary: ''
     },
     experience: [
@@ -31,8 +32,7 @@ function App() {
         degree: '',
         field: '',
         startDate: '',
-        endDate: '',
-        gpa: ''
+        endDate: ''
       }
     ],
     skills: []

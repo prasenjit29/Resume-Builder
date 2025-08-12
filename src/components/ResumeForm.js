@@ -44,8 +44,7 @@ const ResumeForm = ({ resumeData, updateResumeData }) => {
       degree: '',
       field: '',
       startDate: '',
-      endDate: '',
-      gpa: ''
+      endDate: ''
     };
     updateResumeData('education', [...resumeData.education, newEducation]);
   };
@@ -210,6 +209,16 @@ const ResumeForm = ({ resumeData, updateResumeData }) => {
             </div>
 
             <div className="form-group">
+              <label>GitHub</label>
+              <input
+                type="url"
+                value={resumeData.personalInfo.github}
+                onChange={(e) => updatePersonalInfo('github', e.target.value)}
+                placeholder="Enter your GitHub profile URL"
+              />
+            </div>
+
+            <div className="form-group">
               <label>Professional Summary</label>
               <textarea
                 value={resumeData.personalInfo.summary}
@@ -350,15 +359,6 @@ const ResumeForm = ({ resumeData, updateResumeData }) => {
                       value={edu.field}
                       onChange={(e) => updateEducation(edu.id, 'field', e.target.value)}
                       placeholder="e.g., Computer Science"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>GPA</label>
-                    <input
-                      type="text"
-                      value={edu.gpa}
-                      onChange={(e) => updateEducation(edu.id, 'gpa', e.target.value)}
-                      placeholder="e.g., 3.8/4.0"
                     />
                   </div>
                 </div>
