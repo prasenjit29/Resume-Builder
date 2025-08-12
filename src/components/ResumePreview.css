@@ -158,6 +158,32 @@
   line-height: 1.6;
 }
 
+.job-description-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.job-description-item {
+  color: var(--template-text, #495057);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.job-description-item:last-child {
+  margin-bottom: 0;
+}
+
+.job-description-item::before {
+  content: "•";
+  color: var(--template-primary, #667eea);
+  font-weight: bold;
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+}
+
 /* Education Section */
 .education-entry {
   margin-bottom: var(--template-item-margin, 1.5rem);

@@ -140,8 +140,14 @@ const ResumePreview = ({ resumeData, selectedTemplate }) => {
                     {formatDateRange(exp.startDate, exp.endDate)}
                   </span>
                 </div>
-                {exp.description && (
-                  <p className="job-description">{exp.description}</p>
+                {exp.description && exp.description.length > 0 && (
+                  <ul className="job-description-list">
+                    {exp.description.map((bullet, bulletIndex) => (
+                      <li key={bulletIndex} className="job-description-item">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             ))}

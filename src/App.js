@@ -24,7 +24,7 @@ function App() {
         position: '',
         startDate: '',
         endDate: '',
-        description: ''
+        description: []
       }
     ],
     education: [
@@ -71,7 +71,7 @@ function App() {
           position: '',
           startDate: '',
           endDate: '',
-          description: ''
+          description: []
         }
       ],
       education: [

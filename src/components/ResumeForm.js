@@ -20,7 +20,7 @@ const ResumeForm = ({ resumeData, updateResumeData }) => {
       position: '',
       startDate: '',
       endDate: '',
-      description: ''
+      description: []
     };
     updateResumeData('experience', [...resumeData.experience, newExperience]);
   };
@@ -295,12 +295,46 @@ const ResumeForm = ({ resumeData, updateResumeData }) => {
 
                 <div className="form-group">
                   <label>Description</label>
-                  <textarea
-                    value={exp.description}
-                    onChange={(e) => updateExperience(exp.id, 'description', e.target.value)}
-                    placeholder="Describe your responsibilities and achievements..."
-                    rows="3"
-                  />
+                  <div className="bullet-points-container">
+                    {exp.description && exp.description.length > 0 ? (
+                      exp.description.map((bullet, bulletIndex) => (
+                        <div key={bulletIndex} className="bullet-point-row">
+                          <span className="bullet">•</span>
+                          <input
+                            type="text"
+                            value={bullet}
+                            onChange={(e) => {
+                              const newDescription = [...exp.description];
+                              newDescription[bulletIndex] = e.target.value;
+                              updateExperience(exp.id, 'description', newDescription);
+                            }}
+                            placeholder="Enter bullet point description..."
+                            className="bullet-input"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const newDescription = exp.description.filter((_, index) => index !== bulletIndex);
+                              updateExperience(exp.id, 'description', newDescription);
+                            }}
+                            className="remove-bullet-btn"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))
+                    ) : null}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const newDescription = exp.description ? [...exp.description, ''] : [''];
+                        updateExperience(exp.id, 'description', newDescription);
+                      }}
+                      className="add-bullet-btn"
+                    >
+                      + Add Bullet Point
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
