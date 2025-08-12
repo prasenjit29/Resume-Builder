@@ -1,11 +1,12 @@
 .resume-preview {
-  background: white;
+  background: var(--template-background, white);
   border-radius: 12px;
   overflow: hidden;
+  font-family: var(--template-font-family, -apple-system, BlinkMacSystemFont, sans-serif);
 }
 
 .preview-header {
-  background: #f8f9fa;
+  background: var(--template-section-bg, #f8f9fa);
   padding: 1.5rem;
   border-bottom: 1px solid #e9ecef;
   display: flex;
@@ -15,13 +16,13 @@
 
 .preview-header h3 {
   margin: 0;
-  color: #333;
+  color: var(--template-text, #333);
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .print-btn {
-  background: #667eea;
+  background: var(--template-primary, #667eea);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -36,7 +37,7 @@
 }
 
 .print-btn:hover {
-  background: #5a6fd8;
+  background: var(--template-secondary, #5a6fd8);
 }
 
 .print-btn::before {
@@ -45,23 +46,23 @@
 }
 
 .resume-content {
-  padding: 2rem;
+  padding: var(--template-padding, 2rem);
   line-height: 1.6;
-  color: #333;
+  color: var(--template-text, #333);
 }
 
 /* Resume Header */
 .resume-header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--template-section-margin, 2rem);
   padding-bottom: 1rem;
-  border-bottom: 2px solid #667eea;
+  border-bottom: var(--template-accent-border, 3px solid #667eea);
 }
 
 .resume-name {
-  font-size: 2rem;
+  font-size: var(--template-name-size, 2rem);
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--template-text, #2c3e50);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -79,42 +80,42 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.85rem;
-  color: #6c757d;
+  font-size: var(--template-body-size, 0.85rem);
+  color: var(--template-text-light, #6c757d);
   white-space: nowrap;
 }
 
 .contact-label {
   font-weight: 600;
-  color: #495057;
+  color: var(--template-text, #495057);
 }
 
 /* Resume Sections */
 .resume-section {
-  margin-bottom: 2rem;
+  margin-bottom: var(--template-section-margin, 2rem);
 }
 
 .resume-section h2 {
-  color: #2c3e50;
-  font-size: 1.4rem;
+  color: var(--template-text, #2c3e50);
+  font-size: var(--template-section-size, 1.4rem);
   font-weight: 600;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: var(--template-section-border, 2px solid #e9ecef);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .summary-text {
-  font-size: 1rem;
-  color: #495057;
+  font-size: var(--template-body-size, 1rem);
+  color: var(--template-text, #495057);
   text-align: justify;
   line-height: 1.7;
 }
 
 /* Experience Section */
 .experience-entry {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--template-item-margin, 1.5rem);
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #f1f3f4;
 }
@@ -134,24 +135,24 @@
 .job-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--template-text, #2c3e50);
   margin: 0;
 }
 
 .company-name {
   font-size: 1rem;
   font-weight: 500;
-  color: #667eea;
+  color: var(--template-primary, #667eea);
 }
 
 .date-range {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: var(--template-text-light, #6c757d);
   font-style: italic;
 }
 
 .job-description {
-  color: #495057;
+  color: var(--template-text, #495057);
   margin: 0;
   text-align: justify;
   line-height: 1.6;
@@ -159,7 +160,7 @@
 
 /* Education Section */
 .education-entry {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--template-item-margin, 1.5rem);
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #f1f3f4;
 }
@@ -179,21 +180,21 @@
 .degree-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--template-text, #2c3e50);
   margin: 0;
 }
 
 .institution-name {
   font-size: 1rem;
   font-weight: 500;
-  color: #667eea;
+  color: var(--template-primary, #667eea);
 }
 
 /* Skills Section */
 .skill-category-preview {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: var(--template-section-bg, #f8f9fa);
   border-radius: 8px;
   border-left: 4px solid;
 }
@@ -293,7 +294,7 @@
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
-  color: #6c757d;
+  color: var(--template-text-light, #6c757d);
 }
 
 .empty-icon {
@@ -303,7 +304,7 @@
 }
 
 .empty-state h3 {
-  color: #495057;
+  color: var(--template-text, #495057);
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
@@ -340,7 +341,7 @@
   }
   
   .contact-item {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   
   .skill-category-preview {

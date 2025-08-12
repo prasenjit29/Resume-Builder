@@ -1,7 +1,10 @@
 import React from 'react';
 import './ResumePreview.css';
+import { getTemplate } from '../config/templates';
 
-const ResumePreview = ({ resumeData }) => {
+const ResumePreview = ({ resumeData, selectedTemplate }) => {
+  const template = getTemplate(selectedTemplate);
+  
   const formatDate = (dateString) => {
     if (!dateString) return '';
     const date = new Date(dateString);
@@ -40,8 +43,27 @@ const ResumePreview = ({ resumeData }) => {
     { key: 'agile', label: 'Agile & Methodologies', color: '#17a2b8', icon: '📋' }
   ];
 
+  const previewStyle = {
+    '--template-primary': template.colors.primary,
+    '--template-secondary': template.colors.secondary,
+    '--template-accent': template.colors.accent,
+    '--template-text': template.colors.text,
+    '--template-text-light': template.colors.textLight,
+    '--template-background': template.colors.background,
+    '--template-section-bg': template.colors.sectionBg,
+    '--template-name-size': template.typography.nameSize,
+    '--template-section-size': template.typography.sectionSize,
+    '--template-body-size': template.typography.bodySize,
+    '--template-font-family': template.typography.fontFamily,
+    '--template-section-margin': template.spacing.sectionMargin,
+    '--template-item-margin': template.spacing.itemMargin,
+    '--template-padding': template.spacing.padding,
+    '--template-section-border': template.borders.sectionBorder,
+    '--template-accent-border': template.borders.accentBorder
+  };
+
   return (
-    <div className="resume-preview">
+    <div className="resume-preview" style={previewStyle}>
       <div className="preview-header">
         <h3>Resume Preview</h3>
         <button 
