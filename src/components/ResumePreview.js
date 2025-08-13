@@ -106,14 +106,28 @@ const ResumePreview = ({ resumeData, selectedTemplate }) => {
             {resumeData.personalInfo.linkedin && (
               <div className="contact-item">
                 <span className="contact-label">LinkedIn:</span>
-                <span>{resumeData.personalInfo.linkedin}</span>
+                <a 
+                  href={resumeData.personalInfo.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="contact-link"
+                >
+                  {resumeData.personalInfo.linkedin}
+                </a>
               </div>
             )}
 
             {resumeData.personalInfo.github && (
               <div className="contact-item">
                 <span className="contact-label">GitHub:</span>
-                <span>{resumeData.personalInfo.github}</span>
+                <a 
+                  href={resumeData.personalInfo.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="contact-link"
+                >
+                  {resumeData.personalInfo.github}
+                </a>
               </div>
             )}
           </div>
@@ -183,21 +197,16 @@ const ResumePreview = ({ resumeData, selectedTemplate }) => {
               if (categorySkills.length === 0) return null;
               
               return (
-                <div key={category.key} className="skill-category-preview">
-                  <h3 className="category-title-preview" style={{ color: category.color }}>
-                    {category.label}
-                  </h3>
-                  <div className="skills-grid">
-                    {categorySkills.map((skill) => (
-                      <span 
-                        key={skill.id} 
-                        className="skill-item"
-                        style={{ backgroundColor: category.color }}
-                      >
+                <div key={category.key} className="skill-category-simple">
+                  <span className="skill-category-label">{category.label}:</span>
+                  <span className="skill-category-skills">
+                    {categorySkills.map((skill, skillIndex) => (
+                      <span key={skill.id}>
                         {skill.name}
+                        {skillIndex < categorySkills.length - 1 ? ', ' : ''}
                       </span>
                     ))}
-                  </div>
+                  </span>
                 </div>
               );
             })}
