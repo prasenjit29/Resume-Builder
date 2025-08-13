@@ -25,22 +25,22 @@ const ResumePreview = ({ resumeData, selectedTemplate }) => {
   };
 
   const skillCategories = [
-    { key: 'programming', label: 'Programming Languages', color: '#667eea', icon: '💻' },
-    { key: 'frontend', label: 'Frontend Development', color: '#28a745', icon: '🎨' },
-    { key: 'backend', label: 'Backend Development', color: '#dc3545', icon: '⚙️' },
-    { key: 'database', label: 'Databases', color: '#fd7e14', icon: '🗄️' },
-    { key: 'cloud', label: 'Cloud Platforms', color: '#6f42c1', icon: '☁️' },
-    { key: 'devops', label: 'DevOps & Tools', color: '#20c997', icon: '🔧' },
-    { key: 'mobile', label: 'Mobile Development', color: '#e83e8c', icon: '📱' },
-    { key: 'ai-ml', label: 'AI & Machine Learning', color: '#17a2b8', icon: '🤖' },
-    { key: 'cybersecurity', label: 'Cybersecurity', color: '#ffc107', icon: '🔒' },
-    { key: 'networking', label: 'Networking', color: '#6c757d', icon: '🌐' },
-    { key: 'testing', label: 'Testing & QA', color: '#fd7e14', icon: '🧪' },
-    { key: 'data', label: 'Data Science', color: '#20c997', icon: '📊' },
-    { key: 'blockchain', label: 'Blockchain', color: '#6f42c1', icon: '⛓️' },
-    { key: 'game-dev', label: 'Game Development', color: '#e83e8c', icon: '🎮' },
-    { key: 'ui-ux', label: 'UI/UX Design', color: '#fd7e14', icon: '🎯' },
-    { key: 'agile', label: 'Agile & Methodologies', color: '#17a2b8', icon: '📋' }
+    { key: 'programming', label: 'Programming Languages', color: '#667eea' },
+    { key: 'frontend', label: 'Frontend Development', color: '#28a745' },
+    { key: 'backend', label: 'Backend Development', color: '#dc3545' },
+    { key: 'database', label: 'Databases', color: '#fd7e14' },
+    { key: 'cloud', label: 'Cloud Platforms', color: '#6f42c1' },
+    { key: 'devops', label: 'DevOps & Tools', color: '#20c997' },
+    { key: 'mobile', label: 'Mobile Development', color: '#e83e8c' },
+    { key: 'ai-ml', label: 'AI & Machine Learning', color: '#17a2b8' },
+    { key: 'cybersecurity', label: 'Cybersecurity', color: '#ffc107' },
+    { key: 'networking', label: 'Networking', color: '#6c757d' },
+    { key: 'testing', label: 'Testing & QA', color: '#fd7e14' },
+    { key: 'data', label: 'Data Science', color: '#20c997' },
+    { key: 'blockchain', label: 'Blockchain', color: '#6f42c1' },
+    { key: 'game-dev', label: 'Game Development', color: '#e83e8c' },
+    { key: 'ui-ux', label: 'UI/UX Design', color: '#fd7e14' },
+    { key: 'agile', label: 'Agile & Methodologies', color: '#17a2b8' }
   ];
 
   const previewStyle = {
@@ -185,7 +185,7 @@ const ResumePreview = ({ resumeData, selectedTemplate }) => {
               return (
                 <div key={category.key} className="skill-category-preview">
                   <h3 className="category-title-preview" style={{ color: category.color }}>
-                    {category.icon} {category.label}
+                    {category.label}
                   </h3>
                   <div className="skills-grid">
                     {categorySkills.map((skill) => (
