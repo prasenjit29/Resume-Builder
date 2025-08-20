@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './LandingPage.css';
+import { useNavigate } from 'react-router-dom';
+
+
 
 // Font Awesome CDN for icons (add to public/index.html for production)
 const FA_LINK = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
@@ -45,6 +48,10 @@ const testimonials = [
 ];
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [loadingBtn, setLoadingBtn] = useState(null);
@@ -205,20 +212,19 @@ useEffect(() => {
   }, []);
 
   // Loading state for CTA buttons
-  const handleCTA = (e, btnKey) => {
-    e.preventDefault();
-    setLoadingBtn(btnKey);
-    setTimeout(() => {
-      setLoadingBtn(null);
-      alert('Welcome to Resume Builder! This would redirect to the resume building form.');
-    }, 1500);
-  };
+const handleCTA = (e, btnKey) => {
+  e.preventDefault();
+  setLoadingBtn(btnKey);
+  setTimeout(() => {
+    setLoadingBtn(null);
+    navigate('/resume-builder'); // Change to your actual route
+  }, 500); // Shorter delay for better UX
+};
 
-  // View Templates
-  const handleViewTemplates = (e) => {
-    e.preventDefault();
-    alert('This would show you our template gallery!');
-  };
+const handleViewTemplates = (e) => {
+  e.preventDefault();
+  navigate('/templates'); // Change to your actual route
+};
 
   // Mailto copy
   const handleMailClick = (e) => {
