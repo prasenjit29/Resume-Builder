@@ -29,18 +29,18 @@ const whyResumes = [
 const testimonials = [
   {
     quote: 'This resume builder helped me land my dream job! The templates are professional and the AI suggestions saved me hours of writing.',
-    name: 'Sarah Johnson',
-    title: 'Marketing Manager'
+    name: 'Sanghdeep Gedam',
+    title: 'Cloud Engineer'
   },
   {
     quote: 'The ATS optimization feature is game-changing. I went from 0 responses to 5 interviews in just two weeks after using this platform.',
-    name: 'Michael Chen',
-    title: 'Software Engineer'
+    name: 'Pratik Mendhe',
+    title: 'Frontend Developer'
   },
   {
     quote: 'Clean, easy to use, and the results speak for themselves. I got hired within a month of updating my resume with this tool.',
-    name: 'Emily Rodriguez',
-    title: 'Project Manager'
+    name: 'Virendra Shahane',
+    title: 'Backend Developer'
   }
 ];
 
@@ -467,8 +467,8 @@ useEffect(() => {
                 <h4 className="footer__title">Follow Us</h4>
                 <div className="footer__social">
                   <a href="#" className="footer__social-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-                  <a href="#" className="footer__social-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                  <a href="#" className="footer__social-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/prasenjit-urade-a96155323/" className="footer__social-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/prasenjit29" className="footer__social-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -503,10 +503,10 @@ useEffect(() => {
                   <div className="about__contact">
                     <h4>Get in touch:</h4>
                     <div className="contact__links">
-                      <a href="mailto:hello@resumebuilder.com" className="contact__link" target="_blank" rel="noopener noreferrer" onClick={handleMailClick}>
-                        <i className="fas fa-envelope"></i> hello@resumebuilder.com
+                      <a href="mailto:prasenjiturade@gmail.com" className="contact__link" target="_blank" rel="noopener noreferrer" onClick={handleMailClick}>
+                        <i className="fas fa-envelope"></i> prasenjiturade@gmail.com
                       </a>
-                      <a href="#" className="contact__link" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/prasenjit-urade-a96155323/" className="contact__link" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-linkedin"></i> LinkedIn
                       </a>
                       <a href="#" className="contact__link" target="_blank" rel="noopener noreferrer">
