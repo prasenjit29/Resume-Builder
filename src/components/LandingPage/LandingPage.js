@@ -283,7 +283,7 @@ const handleViewTemplates = (e) => {
         <nav className="nav container">
           <div className="nav__brand">
             <i className="fas fa-file-alt"></i>
-            <span>ResumeBuilder Pro</span>
+            <span>HireWire</span>
           </div>
           <ul className={`nav__menu${menuOpen ? ' active' : ''}`}>
             <li><a href="#home" className="nav__link" onClick={e => handleNavClick(e, 'home')}>Home</a></li>
@@ -448,7 +448,7 @@ const handleViewTemplates = (e) => {
             <div className="footer__brand">
               <div className="nav__brand">
                 <i className="fas fa-file-alt"></i>
-                <span>ResumeBuilder Pro</span>
+                <span>HireWire</span>
               </div>
               <p className="footer__description">Build professional resumes that get you hired faster.</p>
             </div>

@@ -5,6 +5,8 @@ import ResumeForm from './ResumeForm';
 import ResumePreview from './ResumePreview';
 
 function ResumeBuilder() {
+
+  
   const [selectedTemplate, setSelectedTemplate] = useState(null);
   const [resumeData, setResumeData] = useState({
     personalInfo: {
